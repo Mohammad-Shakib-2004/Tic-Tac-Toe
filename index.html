@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splashScreen" class="splash-screen">
+        <h1>Welcome to Tic Tac Toe</h1>
+        <p>All rights reserved Cloud Wizards 2024</p>
+        <button id="enterGameButton">Enter Game</button>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="game-container" style="display: none;">
+        <h1>Tic Tac Toe</h1>
+        <div class="sound-control">
+            <button id="soundToggle">Sound: On</button>
+        </div>
+        <div class="mode-selection">
+            <button id="playFriend">Play vs Friend</button>
+            <button id="playComputer">Play vs Computer</button>
+        </div>
+        <div id="difficultySelection" class="difficulty-selection" style="display: none;">
+            <p>Select Difficulty:</p>
+            <button id="easyMode">Easy</button>
+            <button id="mediumMode">Medium</button>
+            <button id="hardMode">Hard</button>
+        </div>
+        <div class="player-names">
+            <input id="playerXNameInput" type="text" placeholder="Enter Player X Name">
+            <input id="playerONameInput" type="text" placeholder="Enter Player O Name (if needed)">
+        </div>
+        <button id="startGameButton">Start Game</button>
+        <div id="gameBoard" class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div class="controls">
+            <button id="resetButton">Reset</button>
+        </div>
+        <p id="gameStatus"></p>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="backgroundMusic" loop>
+        <source src="/sounds/background.mp3" type="audio/mp3">
+    </audio>
+    <audio id="tapSound">
+        <source src="/sounds/tap.mp3" type="audio/mp3">
+    </audio>
+    <audio id="winSound">
+        <source src="/sounds/win.mp3" type="audio/mp3">
+    </audio>
+    <audio id="tieSound">
+        <source src="/sounds/tie.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="main.js"></script>
+</body>
+</html>
